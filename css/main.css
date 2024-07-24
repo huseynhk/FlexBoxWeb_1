@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Sevillana', cursive;
+  font-size: 20px;
+}
+
+p , li{
+  font-family: 'Poppins', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* --------- Header --------- */
+
+.main {
+  width: 100%;
+  height: auto;
+}
+
+.main h1 {
+  color: #12343b;
+  font-size: 50px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+header nav {
+  background-color: #12343b;
+  color: White;
+  padding: 40px;
+}
+
+header ul{
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+header li {
+  padding: 10px;
+  font-size: 20px;
+}
+
+header li a{
+  text-decoration: none;
+  color: lightcyan;
+}
+
+header li a:hover{
+  color: rgb(145, 245, 245);
+}
+
+.mainImg{
+  background-image: url("../img/women-cycling-main.jpg");
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+/* --------- Description --------- */
+
+.supporting,
+.rating,
+.gallery,
+.location {
+  margin: 32px auto;
+}
+
+
+
+.supporting h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #39a0ca;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.supporting p {
+  font-size: 20px;
+  padding: 10px;
+  color: #39a0ca;
+
+}
+
+.location p{
+  color: #39a0ca;
+}
+
+/* --------- Rating --------- */
+
+.rating {
+  background-color:#39a0ca;
+  height: 300px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating h2 {
+  font-size:20px;
+  line-height: 50px;
+  font-weight: 500;
+  padding:32px;
+}
+
+/* --------- Gallery --------- */
+
+.gallery {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.gallery img {
+  width: 29%;
+  margin: 2%;
+  border-radius: 25px;
+  transform:perspective(800px) rotateY(20deg);
+  transition:0.5s ease;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
+  rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+  rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+  rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+  rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+/* containere hover olanda img opacity olsun*/
+.container:hover img {
+  opacity:0.4;
+}
+/* Containerin icindeki image  hover eliyende bunlar bas versin */
+.container img:hover {
+  transform:perspective(800px)  rotateY(0deg);
+  opacity:1;
+  border-radius: 70px 140px 70px 70px;
+}
+
+
+/* --------- Location --------- */
+
+.location .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.location p {
+  font-size: 30px;
+  line-height: 50px;
+  padding: 30px 40px;
+}
+
+
+
+/* --------- Cards --------- */
+.cards{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.card {
+  width: 380px;
+  height: 300px;
+  /* perspective: 1000px; */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform .9s;
+  transform-style: preserve-3d;
+  /* bunu elave etsek arxaya basqa sekil atmaq olar */
+}
+
+/* carda hover eliyende card inneri */
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  /* backface-visibility bunun komeyi ile arxadaki sekili gostere bilirik */
+}
+
+.card-front {
+  background-image: url("../img/laguna-palm-trees.jpg");
+  background-size: cover;
+  color: white;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background-image: url("../img/road-bike.jpg");
+  background-size: cover;
+  color: white;
+}
+
+/* --------- Footer --------- */
+
+footer {
+  background-color: #12343b;
+  padding: 35px;
+}
+
+
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  color: white;
+}
+
+
+
+
